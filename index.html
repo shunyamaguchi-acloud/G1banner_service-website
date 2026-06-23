@@ -13,8 +13,8 @@
     --green:#1a7a4a; --green-bg:#e8f7ef;
     --surface:#fff; --text:#1a1a1a; --muted:#666; --border:#e8d0e0; --row:#fdf6fa;
     --page-w:900px; --nav-h:54px;
-    --t-xl:20px; --t-lg:15px; --t-price:28px; --t-plan:15px;
-    --t-sec:11px; --t-body:12px; --t-sub:10px; --t-xs:9.5px;
+    --t-xl:22px; --t-lg:16.5px; --t-price:30px; --t-plan:16px;
+    --t-sec:12px; --t-body:13px; --t-sub:11.5px; --t-xs:10.5px;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -25,19 +25,17 @@
     position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000;
     background:#fff; border-bottom:1px solid var(--border);
     box-shadow:0 2px 10px rgba(0,0,0,.08);
-    display:flex; align-items:center;
-    padding:0;
+    display:flex; align-items:center; justify-content:center;
+    padding:0 28px;
   }
   .nav-title{
+    position:absolute; left:28px;
     display:flex; align-items:center; gap:8px; flex-shrink:0;
     font-weight:900; font-size:13px; color:var(--pink); letter-spacing:.02em;
-    padding:0 20px;
-    border-right:1px solid var(--border);
-    margin-right:4px;
     white-space:nowrap;
   }
   .nav-title .dot{width:8px;height:8px;border-radius:50%;background:var(--pink-bright);flex-shrink:0}
-  .nav-links{display:flex; align-items:center; gap:6px; flex:1; min-width:0; padding:0 8px; flex-wrap:nowrap}
+  .nav-links{display:flex; align-items:center; gap:6px; flex-shrink:0}
   .nav-links a{
     display:inline-flex; align-items:center; gap:4px;
     font-size:11px; font-weight:700; color:var(--pink-dark);
@@ -178,10 +176,36 @@
   .pf{background:var(--pink-dark);padding:9px 40px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
   .fb{color:rgba(255,255,255,.6);font-size:var(--t-xs);font-weight:700;letter-spacing:.1em}
   .fs2{color:rgba(255,255,255,.4);font-size:var(--t-xs)}
+  @media screen and (max-width: 768px){
+    :root{--page-w:100%;--nav-h:auto}
+    body{padding-top:0;background:#fff;font-size:14px}
+    .topnav{position:sticky;height:auto;display:block;padding:8px 10px}
+    .nav-title{justify-content:center;border-right:0;margin:0 0 6px;padding:0;font-size:12px}
+    .nav-links{display:flex;gap:6px;overflow-x:auto;padding:0 0 2px;scrollbar-width:thin}
+    .nav-links a{font-size:12px;padding:7px 10px}
+    .page{width:100%;margin:0 0 16px;border-radius:0;box-shadow:none}
+    .ph{padding:22px 18px;display:block}
+    .hr{text-align:left;margin-top:12px}
+    .page-body{padding:22px 16px 26px}
+    .direction-hero,.solution-banner,.sales-cta-strip{display:block;padding:18px}
+    .solution-price{margin-top:12px;text-align:left}
+    .impact-grid,.quick-targets,.tgt-g,.merit-g,.value-g,.sc-g,.faq-g,.bill-g{grid-template-columns:1fr}
+    .ba-g{grid-template-columns:1fr;gap:8px}
+    .ba-ar{transform:rotate(90deg)}
+    .flow{display:block}
+    .fs{margin-bottom:8px}
+    .fa{justify-content:center;transform:rotate(90deg);margin:4px 0}
+    .pt,.ft{display:block;overflow-x:auto;white-space:nowrap}
+    .pf{padding:10px 16px;display:block}
+    .fs2{margin-top:4px}
+  }
+
   @media print{
+    @page{size:A4 landscape;margin:8mm}
     .topnav{display:none}
     body{background:#fff;padding-top:0}
-    .page{margin:0;box-shadow:none;border-radius:0}
+    .page{width:100%;min-height:190mm;margin:0;box-shadow:none;border-radius:0;page-break-after:always}
+    .page-body{padding:22px 30px 24px}
   }
 </style>
 </head>
