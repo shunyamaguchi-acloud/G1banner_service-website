@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G1限定バナー制作プラン｜営業担当者向けご案内</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239B4266'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='%23fff'%3EG1%3C/text%3E%3Ccircle cx='48' cy='16' r='6' fill='%23E0B04F'/%3E%3C/svg%3E">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
   :root {
     --pink:#9B4266; --pink-dark:#74324d; --pink-bright:#B95D80;
     --pink-pale:#F8EAF0; --pink-light:#FCF5F8;
@@ -52,10 +53,13 @@
 
   .page{width:min(var(--page-w), calc(100% - 32px));margin:24px auto;background:var(--surface);border-radius:4px;box-shadow:0 4px 24px rgba(0,0,0,.10);overflow:hidden;display:flex;flex-direction:column;page-break-after:always;scroll-margin-top:calc(var(--nav-h) + 16px)}
   .page-body{padding:30px 44px 34px;flex:1}
+  .page-guide{display:flex;align-items:center;gap:12px;background:#fbf4f7;border:1px solid #ead1dc;border-left:6px solid var(--pink);border-radius:6px;padding:10px 14px;margin:0 0 18px;color:var(--pink-dark);line-height:1.55}
+  .page-guide-label{flex:0 0 auto;background:var(--pink);color:#fff;font-size:var(--t-xs);font-weight:900;letter-spacing:.08em;padding:4px 8px;border-radius:3px}
+  .page-guide-text{font-size:13px;font-weight:800}
   .ph{background:#8f3d5f;padding:26px 40px 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-shrink:0}
   .hl{flex:1}
   .badge{background:#fff;color:var(--pink);font-size:12px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:2px;display:inline-block;margin-bottom:8px}
-  .ph h1{font-family:'Noto Serif JP',serif;font-size:27px;color:#fff;line-height:1.45}
+  .ph h1{font-family:'Noto Sans JP',sans-serif;font-size:27px;font-weight:900;color:#fff;line-height:1.45;letter-spacing:.02em}
   .ph .sub{font-size:13.5px;color:rgba(255,255,255,.86);margin-top:5px}
   .hr{text-align:right;flex-shrink:0}
   .hr .brand{font-size:22px;font-weight:900;color:#fff;letter-spacing:.12em}
@@ -117,10 +121,6 @@
   .merit-n{font-size:var(--t-xs);font-weight:900;color:var(--pink-bright);letter-spacing:.08em;margin-bottom:4px}
   .merit-h{font-size:var(--t-body);font-weight:900;color:var(--pink-dark);line-height:1.45;margin-bottom:4px}
   .merit-t{font-size:var(--t-sub);color:var(--muted);line-height:1.65}
-  .value-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
-  .value-c{background:#fff;border:1px solid #ead7e0;border-left:4px solid var(--pink-bright);border-radius:5px;padding:11px 12px}
-  .value-h{font-size:var(--t-xs);font-weight:900;color:var(--pink);letter-spacing:.05em;margin-bottom:3px}
-  .value-t{font-size:var(--t-sub);color:var(--muted);line-height:1.55}
   .sc-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
   .sc-c{border:1px solid var(--border);border-radius:6px;overflow:hidden}
   .sc-h{background:var(--pink);color:#fff;font-size:var(--t-xs);font-weight:700;padding:7px 12px}
@@ -185,7 +185,6 @@
   .solution-sub,
   .quick-target,
   .merit-t,
-  .value-t,
   .sc-b,
   .ba-l li,
   .ba-con,
@@ -202,7 +201,6 @@
   .sales-cta-label,
   .solution-label,
   .merit-n,
-  .value-h,
   .fn{font-size:12px}
   .impact-title,
   .sales-cta-main,
@@ -270,11 +268,69 @@
   .impact-card,
   .merit-c{padding:12px 14px}
   .sales-cta-strip{padding:13px 17px;margin:-4px 0 16px}
-  .value-g{gap:10px;margin-bottom:18px}
-  .value-c{padding:11px 12px}
   .ba-g{gap:10px;margin-bottom:14px}
   .faq-g{gap:10px}
   .pf{padding:11px 40px}
+
+  /* priority reading balance */
+  .direction-hero{
+    padding:24px 28px;
+    margin-bottom:14px;
+  }
+  .direction-title{
+    font-size:28px;
+    line-height:1.32;
+    margin-bottom:10px;
+  }
+  .direction-copy{
+    font-size:14.5px;
+    line-height:1.85;
+    max-width:760px;
+  }
+  .hero-catch{
+    font-size:15.5px;
+    padding:8px 13px;
+  }
+  .sales-cta-main{
+    font-size:15px;
+  }
+  .sales-cta-sub{
+    font-size:13px;
+    line-height:1.7;
+  }
+  .impact-grid,
+  .merit-g,
+  .quick-targets,
+  .sc-g,
+  .faq-g,
+  .bill-g{
+    gap:8px;
+    margin-bottom:12px;
+  }
+  .impact-card,
+  .merit-c,
+  .sc-c,
+  .faq-i,
+  .bill-c{
+    padding:10px 12px;
+  }
+  .sec{
+    margin-bottom:9px;
+  }
+  .quick-target{
+    padding:9px 11px;
+  }
+  .ba-g{
+    margin-bottom:10px;
+  }
+  .fs{
+    padding:11px 9px;
+  }
+  .notice,
+  .notes{
+    padding:9px 12px;
+    margin-bottom:12px;
+  }
 
   @media screen and (max-width: 980px){
     :root{--page-w:100%;--nav-h:auto}
@@ -287,9 +343,13 @@
     .ph{padding:22px 18px;display:block}
     .hr{text-align:left;margin-top:12px}
     .page-body{padding:22px 16px 26px}
-    .direction-hero,.solution-banner,.sales-cta-strip{display:block;padding:18px}
+    .page-guide,.direction-hero,.solution-banner,.sales-cta-strip{display:block;padding:18px}
+    .page-guide-label{display:inline-block;margin-bottom:8px}
+    .page-guide-text{font-size:13px}
+    .direction-title{font-size:23px}
+    .direction-copy{font-size:14px}
     .solution-price{margin-top:12px;text-align:left}
-    .impact-grid,.quick-targets,.tgt-g,.merit-g,.value-g,.sc-g,.faq-g,.bill-g{grid-template-columns:1fr}
+    .impact-grid,.quick-targets,.tgt-g,.merit-g,.sc-g,.faq-g,.bill-g{grid-template-columns:1fr}
     .ba-g{grid-template-columns:1fr;gap:8px}
     .ba-ar{transform:rotate(90deg)}
     .flow{display:block}
@@ -335,11 +395,15 @@
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">G1限定バナー制作プランの概要と、契約後の制作進行を必要に応じて制作側へ相談できることが分かります。</div>
+    </div>
     <div class="direction-hero">
       <div class="direction-label">G1限定サービス｜制作進行サポート対応可能</div>
-      <div class="direction-title">契約後の制作進行は、<strong>制作側にお任せいただけます</strong></div>
+      <div class="direction-title">契約後の制作進行も、<strong>必要に応じて制作側へ相談できます</strong></div>
       <div class="direction-copy">
-        ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで、制作担当が店舗様とやり取りしながら進行します。
+        制作側で進行サポートを行う場合は、ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで制作担当が進行します。
       </div>
       <div class="hero-catch">営業担当者様は、提案・契約・店舗様との関係構築に集中しやすくなります</div>
     </div>
@@ -347,18 +411,18 @@
     <div class="impact-grid">
       <div class="impact-card">
         <div class="impact-label">POINT 01</div>
-        <div class="impact-title">進行負担を減らせる</div>
-        <div class="impact-text">ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで、原則制作側が主担当として進めます。</div>
+        <div class="impact-title">契約後の進行を相談しやすい</div>
+        <div class="impact-text">依頼後の確認、制作進行、修正対応、納品まで、必要に応じて制作側でサポートできます。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 02</div>
         <div class="impact-title">提案前に相談できる</div>
-        <div class="impact-text">対象店舗、制作枚数、依頼内容で迷う場合も、提案前に制作側へご相談いただけます。</div>
+        <div class="impact-text">対象店舗、枚数、制作範囲で迷う場合も、事前に制作側へ確認できます。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 03</div>
-        <div class="impact-title">追加提案しやすい</div>
-        <div class="impact-text">G1HPご契約店舗様へ、月額オプションとして添えやすいプランです。</div>
+        <div class="impact-title">月額オプションとして案内しやすい</div>
+        <div class="impact-text">G1HPご契約店舗様へ、掲載用バナー制作を追加提案しやすいプランです。</div>
       </div>
     </div>
 
@@ -383,15 +447,6 @@
       </div>
     </div>
 
-    <div class="sec">提案しやすい店舗様</div>
-    <div class="quick-targets">
-      <div class="quick-target">G1HPをご契約中・ご提案中の店舗様</div>
-      <div class="quick-target">毎月G1掲載用バナーを更新したい店舗様</div>
-      <div class="quick-target">月替わりのイベントや求人告知を打ち出したい店舗様</div>
-      <div class="quick-target">G1新規契約時に追加提案したい場合</div>
-      <div class="quick-target">既存G1店舗へ月額オプションを案内したい場合</div>
-      <div class="quick-target">契約後の制作進行の負担を抑えたい案件</div>
-    </div>
   </div>
   <div class="pf"><div class="fb">VOTEC</div><div class="fs2">G1限定バナー制作プラン｜IMC限定特別オプション</div></div>
 </div>
@@ -410,12 +465,16 @@
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">営業担当者様の受注後の負担がどこまで軽くなるか、これまでとの違いが分かります。</div>
+    </div>
     <div class="sec">営業にとっての具体的なメリット</div>
     <div class="merit-g">
       <div class="merit-c">
         <div class="merit-n">MERIT 01</div>
         <div class="merit-h">進行負担を減らせる</div>
-        <div class="merit-t">契約後の制作進行は制作側が主担当。営業担当者様だけで細かな進行を抱え込みにくくなります。</div>
+        <div class="merit-t">契約後の制作進行も必要に応じて制作側へ相談可能。営業担当者様だけで細かな進行を抱え込みにくくなります。</div>
       </div>
       <div class="merit-c">
         <div class="merit-n">MERIT 02</div>
@@ -427,13 +486,6 @@
         <div class="merit-h">追加提案しやすい</div>
         <div class="merit-t">G1HPご契約・ご提案中の店舗様へ、月額オプションとして添えやすいプランです。</div>
       </div>
-    </div>
-    <div class="sec">店舗様に伝えやすい価値</div>
-    <div class="value-g">
-      <div class="value-c"><div class="value-h">定額制</div><div class="value-t">月額オプションとして予算感を伝えやすい</div></div>
-      <div class="value-c"><div class="value-h">短納期</div><div class="value-t">管理画面からの依頼後、翌3営業日以内に納品</div></div>
-      <div class="value-c"><div class="value-h">依頼管理</div><div class="value-t">正式依頼を管理画面で確認できるため、月内枚数を把握しやすい</div></div>
-      <div class="value-c"><div class="value-h">修正無料</div><div class="value-t">1デザインにつき2回まで無料対応</div></div>
     </div>
     <div class="sec">これまでとこれから</div>
     <div class="ba-g">
@@ -449,7 +501,7 @@
       </div>
       <div class="ba-ar">▶</div>
       <div class="ba-c after">
-        <div class="ba-h">これから<span>制作進行は制作が主担当</span></div>
+        <div class="ba-h">これから<span>必要に応じて制作側がサポート</span></div>
         <ul class="ba-l">
           <li>G1掲載用バナーのヒアリング</li>
           <li>依頼内容・デザインの方向性を制作が整理</li>
@@ -459,13 +511,7 @@
         </ul>
       </div>
     </div>
-    <div class="ba-con">契約後の制作進行は制作側が主担当として進行します。営業担当者様には案件全体の状況をご確認いただきながら、必要に応じて店舗様へのフォローをお願いいたします。</div>
-    <div class="sec">案件化しやすい切り口</div>
-    <div class="sc-g">
-      <div class="sc-c"><div class="sc-h">新規ご契約時</div><div class="sc-b">G1HPと合わせて、掲載用バナー制作も月額で提案できます。</div></div>
-      <div class="sc-c"><div class="sc-h">既存G1店舗へのご案内時</div><div class="sc-b">毎月のG1掲載用バナー更新を、制作側の進行対応つき定額プランとして案内できます。</div></div>
-      <div class="sc-c"><div class="sc-h">繁忙期前のご案内時</div><div class="sc-b">季節イベントや月替わり告知のG1掲載用バナーを、継続提案につなげやすくなります。</div></div>
-    </div>
+    <div class="ba-con">契約後の制作進行は、必要に応じて制作側でサポートできます。営業担当者様には案件全体の状況をご確認いただきながら、必要に応じて店舗様へのフォローをお願いいたします。</div>
   </div>
   <div class="pf"><div class="fb">VOTEC</div><div class="fs2">G1限定バナー制作プラン｜IMC限定特別オプション</div></div>
 </div>
@@ -484,6 +530,10 @@
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">月額料金、制作枚数、1枚あたり単価、請求・契約のしくみが分かります。</div>
+    </div>
     <div class="sec">料金について</div>
     <table class="pt">
       <thead><tr><th class="tl">プラン名</th><th>制作枚数 / 月</th><th>月額料金（HP管理費別）</th><th>1枚あたりの単価</th></tr></thead>
@@ -516,7 +566,7 @@
     <div class="hl">
       <div class="badge">G1テンプレートHP限定｜営業担当者様向けご案内</div>
       <h1>ご利用フローと役割分担</h1>
-    <div class="sub">契約後の制作進行は制作が主担当。契約・請求・最終判断は営業担当者様と店舗様にてお願いいたします</div>
+    <div class="sub">契約後の制作進行は必要に応じて制作側でサポート可能。契約・請求・最終判断は営業担当者様と店舗様にてお願いいたします</div>
     </div>
     <div class="hr">
       <div class="brand">VOTEC</div>
@@ -524,8 +574,12 @@
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">管理画面からの依頼方法、依頼後の確認方法、役割分担、重要事項が分かります。</div>
+    </div>
     <div class="sec">ご利用フロー</div>
-    <div class="fnote">G1プランでは、依頼枚数を管理するため正式な制作依頼は管理画面からお願いいたします。店舗様・営業担当者様のどちらからご依頼いただいても構いません。事前相談や依頼後の確認・修正整理は、希望に応じてグループチャットまたはグループLINEでも進行できます。</div>
+    <div class="fnote">G1プランでは、月内の依頼枚数を管理するため、正式な制作依頼は管理画面からお願いいたします。店舗様・営業担当者様のどちらからご依頼いただいても構いません。</div>
     <div class="flow">
       <div class="fs"><div class="fn">STEP 01</div><div class="ft2">事前相談・見積</div><div class="fd">対象店舗・枚数・料金<br>制作範囲を確認</div></div>
       <div class="fa">▶</div>
@@ -537,7 +591,7 @@
     </div>
     <div class="notice">
       <strong>【制作進行サポートについて】</strong><br>
-      制作担当が制作窓口を担当し、制作内容のヒアリング、依頼内容の整理、制作進行、修正確認、納品までを主担当として進めます。事前相談や依頼後の確認・修正整理は、希望に応じてグループチャットまたはグループLINEでも対応可能です。月内の依頼枚数を正しく管理するため、正式な制作依頼は原則管理画面からお願いいたします。制作担当による電話対応は原則行っておりません。
+      制作側で進行サポートを行う場合は、制作担当が制作窓口となり、ヒアリング、依頼内容の整理、制作進行、修正確認、納品までを進めます。ご希望に応じて、グループチャットまたはグループLINEでの事前相談・依頼後の確認も可能です。制作担当による電話対応は原則行っておりません。
     </div>
     <div class="notice">
       <strong>【営業担当者様へのお願い】</strong><br>
