@@ -217,8 +217,51 @@
   .ft td{padding:12px 14px}
 
   /* series layout alignment with 定額制資料 */
-  .page{width:min(960px, 100%);margin:28px auto}
+  .topnav{
+    height:var(--nav-h);
+    background:rgba(116,50,77,.97);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    box-shadow:0 2px 16px rgba(0,0,0,.22);
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .nav-title{
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.14em;
+    color:#fff;
+    padding:0 20px;
+    border-right:1px solid rgba(255,255,255,.22);
+    margin-right:4px;
+  }
+  .nav-title .dot{background:#f3c5d5}
+  .nav-links{gap:2px;padding:0 8px;overflow-x:visible}
+  .nav-links a{
+    display:flex;
+    gap:6px;
+    padding:6px 14px;
+    border-radius:4px;
+    background:transparent;
+    color:rgba(255,255,255,.84);
+    border:1px solid transparent;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.04em;
+  }
+  .nav-links a .n{
+    background:rgba(255,255,255,.20);
+    border-radius:3px;
+    font-size:9.5px;
+    font-weight:700;
+    padding:1px 5px;
+    color:rgba(255,255,255,.92);
+    letter-spacing:.02em;
+  }
+  .nav-links a:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.20)}
+  .nav-links a:hover .n{color:#fff}
+  .page{width:min(960px, 100%);margin:28px auto;border-radius:6px;box-shadow:0 4px 28px rgba(0,0,0,.12)}
   .page-body{padding:36px 46px 40px}
+  .ph{padding:26px 40px 22px}
   .direction-hero{padding:22px 24px;margin-bottom:18px}
   .solution-banner{padding:18px 24px;margin-bottom:22px}
   .impact-grid,
