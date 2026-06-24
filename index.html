@@ -16,7 +16,7 @@
     --surface:#fff; --text:#1a1a1a; --muted:#666; --border:#e8d0e0; --row:#fdf6fa;
     --page-w:900px; --nav-h:54px;
     --t-xl:24px; --t-lg:17px; --t-price:31px; --t-plan:17px;
-    --t-sec:12.5px; --t-body:14px; --t-sub:12.5px; --t-xs:11px;
+    --t-sec:13px; --t-body:14.5px; --t-sub:13px; --t-xs:12px;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -206,6 +206,56 @@
   .ft th,
   .ft td{padding:12px 14px}
 
+  /* small text readability floor */
+  .badge,
+  .direction-label,
+  .impact-label,
+  .solution-label,
+  .ba-h span,
+  .b-lbl,
+  .fn,
+  .fb,
+  .fs2,
+  .rbadge,
+  .tp,
+  .tb {
+    font-size:12px;
+  }
+  .sol-ey,
+  .sol-n,
+  .sol-p .from,
+  .sol-p .per,
+  .solution-price .from,
+  .solution-price .per,
+  .quick-target,
+  .impact-text,
+  .solution-sub,
+  .sc-b,
+  .ba-lead,
+  .ba-l li,
+  .ba-con,
+  .notes,
+  .notes li,
+  .b-val,
+  .fnote,
+  .fd,
+  .notice,
+  .notice *,
+  .faq-a,
+  .pu,
+  .tgt-t {
+    font-size:13.5px;
+    line-height:1.8;
+  }
+  .faq-q,
+  .impact-title,
+  .ft2,
+  .ft,
+  .pt {
+    font-size:14.5px;
+    line-height:1.7;
+  }
+
   /* series layout alignment with 定額制資料 */
   .topnav{
     height:var(--nav-h);
@@ -216,7 +266,7 @@
     border-bottom:1px solid rgba(255,255,255,.14);
   }
   .nav-title{
-    font-size:11px;
+    font-size:12px;
     font-weight:900;
     letter-spacing:.14em;
     color:#fff;
@@ -234,14 +284,14 @@
     background:transparent;
     color:rgba(255,255,255,.84);
     border:1px solid transparent;
-    font-size:11px;
+    font-size:12px;
     font-weight:600;
     letter-spacing:.04em;
   }
   .nav-links a .n{
     background:rgba(255,255,255,.20);
     border-radius:3px;
-    font-size:9.5px;
+    font-size:10.5px;
     font-weight:700;
     padding:1px 5px;
     color:rgba(255,255,255,.92);
@@ -357,7 +407,7 @@
   <div class="nav-title"><span class="dot"></span>G1限定バナー制作プラン</div>
   <div class="nav-links">
     <a href="#page1"><span class="n">01</span>制作進行サポート</a>
-    <a href="#page2"><span class="n">02</span>営業メリット</a>
+  <a href="#page2"><span class="n">02</span>提案ポイント</a>
     <a href="#page3"><span class="n">03</span>料金プラン</a>
     <a href="#page4"><span class="n">04</span>フロー・役割分担</a>
   </div>
